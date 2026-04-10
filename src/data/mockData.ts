@@ -1,0 +1,182 @@
+import { Property, BlogPost, Testimonial } from '../types';
+
+export const PROPERTIES: Property[] = [
+  {
+    id: '1',
+    title: 'Eleeva Jardins',
+    slug: 'eleeva-jardins',
+    description: 'O Eleeva Jardins redefine o conceito de morar bem em Sinop. Um projeto vertical moderno com infraestrutura de lazer completa e localização privilegiada.',
+    status: 'Em Obras',
+    type: 'Apartamento',
+    location: 'Sinop',
+    neighborhood: 'Bairro Ipanema',
+    price: 950000,
+    area: 145,
+    bedrooms: 3,
+    bathrooms: 3,
+    suites: 2,
+    parking: 2,
+    images: [
+      'https://picsum.photos/seed/eleeva1/1200/800',
+      'https://picsum.photos/seed/eleeva2/1200/800',
+    ],
+    features: ['Piscina com Borda Infinita', 'Espaço Gourmet', 'Academia High-Tech', 'Coworking', 'Pet Place'],
+    highlights: ['Entrega Antecipada Garantida', 'Certificação PBQP-H', 'Localização Estratégica'],
+    constructionProgress: [
+      { label: 'Fundação', percentage: 100 },
+      { label: 'Estrutura', percentage: 65 },
+      { label: 'Acabamento', percentage: 5 },
+    ],
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.0!2d-55.5!3d-11.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ4JzAwLjAiUyA1NcKwMzAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  },
+  {
+    id: '2',
+    title: 'Eleve Panema',
+    slug: 'eleve-panema',
+    description: 'Sofisticação e conforto no coração do Residencial Ipanema. O Eleve Panema é a escolha ideal para quem busca exclusividade e qualidade de vida.',
+    status: 'Em Obras',
+    type: 'Apartamento',
+    location: 'Sinop',
+    neighborhood: 'Residencial Ipanema',
+    price: 1100000,
+    area: 168,
+    bedrooms: 3,
+    bathrooms: 4,
+    suites: 3,
+    parking: 3,
+    images: [
+      'https://picsum.photos/seed/panema1/1200/800',
+      'https://picsum.photos/seed/panema2/1200/800',
+    ],
+    features: ['Varanda Gourmet Ampla', 'Automação Residencial', 'Vagas para Carro Elétrico', 'Spa e Sauna'],
+    highlights: ['Padrão Muller de Qualidade', 'Vista Panorâmica', 'Inteligência de Engenharia'],
+    constructionProgress: [
+      { label: 'Fundação', percentage: 100 },
+      { label: 'Estrutura', percentage: 90 },
+      { label: 'Acabamento', percentage: 40 },
+    ],
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.0!2d-55.5!3d-11.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ4JzAwLjAiUyA1NcKwMzAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  },
+  {
+    id: '3',
+    title: 'Urban Deville',
+    slug: 'urban-deville',
+    description: 'O Urban Deville traz a modernidade urbana para Sinop. Apartamentos inteligentes projetados para o estilo de vida contemporâneo.',
+    status: 'Em Obras',
+    type: 'Apartamento',
+    location: 'Sinop',
+    neighborhood: 'Centro',
+    price: 780000,
+    area: 95,
+    bedrooms: 2,
+    bathrooms: 2,
+    suites: 1,
+    parking: 1,
+    images: [
+      'https://picsum.photos/seed/urban1/1200/800',
+      'https://picsum.photos/seed/urban2/1200/800',
+    ],
+    features: ['Rooftop Lounge', 'Lavanderia Coletiva', 'Bicicletário', 'Segurança 24h'],
+    highlights: ['Ideal para Investimento', 'Baixo Custo de Condomínio', 'Design Inovador'],
+    constructionProgress: [
+      { label: 'Fundação', percentage: 100 },
+      { label: 'Estrutura', percentage: 30 },
+      { label: 'Acabamento', percentage: 0 },
+    ],
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.0!2d-55.5!3d-11.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ4JzAwLjAiUyA1NcKwMzAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  },
+  {
+    id: '4',
+    title: 'Residencial Guanabara',
+    slug: 'residencial-guanabara',
+    description: 'Estoque remanescente de um dos sucessos de venda da Muller. Pronto para morar com toda a infraestrutura que sua família merece.',
+    status: 'Pronto para Morar',
+    type: 'Apartamento',
+    location: 'Sinop',
+    neighborhood: 'Bairro Guanabara',
+    price: 650000,
+    area: 110,
+    bedrooms: 3,
+    bathrooms: 2,
+    suites: 1,
+    parking: 2,
+    images: [
+      'https://picsum.photos/seed/guanabara1/1200/800',
+    ],
+    features: ['Pronto para Morar', 'Área de Lazer', 'Segurança'],
+    highlights: ['Últimas Unidades', 'Entrega Imediata'],
+    constructionProgress: [
+      { label: 'Obra Concluída', percentage: 100 },
+    ],
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.0!2d-55.5!3d-11.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ4JzAwLjAiUyA1NcKwMzAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Por que investir em imóveis em Sinop?',
+    slug: 'por-que-investir-em-imoveis-em-sinop',
+    excerpt: 'Descubra as vantagens de investir na cidade que mais cresce no Mato Grosso.',
+    content: 'Sinop é um polo de desenvolvimento...',
+    author: 'André Muller',
+    date: '2024-03-15',
+    category: 'Mercado Imobiliário',
+    image: 'https://picsum.photos/seed/blog1/800/600',
+    tags: ['Investimento', 'Sinop', 'Mercado'],
+  },
+  {
+    id: '2',
+    title: 'Dicas de decoração para apartamentos pequenos',
+    slug: 'dicas-de-decoracao-para-apartamentos-pequenos',
+    excerpt: 'Aprenda como otimizar o espaço do seu novo apartamento com estilo.',
+    content: 'Decorar espaços reduzidos exige criatividade...',
+    author: 'Equipe Muller',
+    date: '2024-03-10',
+    category: 'Decoração',
+    image: 'https://picsum.photos/seed/blog2/800/600',
+    tags: ['Decoração', 'Dicas', 'Apartamento'],
+  }
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: '1',
+    name: 'João Silva',
+    role: 'Empresário',
+    content: 'A Muller entregou meu apartamento antes do prazo e com uma qualidade impecável. Recomendo muito!',
+    avatar: 'https://i.pravatar.cc/150?u=joao',
+  },
+  {
+    id: '2',
+    name: 'Maria Oliveira',
+    role: 'Médica',
+    content: 'O atendimento foi excelente desde a primeira visita até a entrega das chaves.',
+    avatar: 'https://i.pravatar.cc/150?u=maria',
+  }
+];
+
+export const COMPANY_INFO = {
+  name: 'Muller Empreendimentos',
+  founded: 2010,
+  director: 'André Muller',
+  location: 'Sinop - MT',
+  address: 'Residencial Ipanema, Sinop - MT',
+  phone: '(66) 99658-2942',
+  email: 'atendimento@mullerempreendimentos.com',
+  whatsapp: '5566996582942',
+  social: {
+    instagram: 'https://instagram.com/mullerempreendimentos',
+    facebook: 'https://facebook.com/mullerempreendimentos',
+    linkedin: 'https://linkedin.com/company/mullerempreendimentos',
+  },
+  mission: 'Ser referência em qualidade e eficiência na construção civil, superando as expectativas de nossos clientes.',
+  vision: 'Inovação e sustentabilidade como pilares para o futuro da habitação.',
+  values: ['Ética', 'Inovação', 'Segurança', 'Humildade'],
+  certifications: ['PBQP-H'],
+  stats: {
+    years: 16,
+    unitsDelivered: 700,
+    verticalProjects: 7,
+  }
+};
