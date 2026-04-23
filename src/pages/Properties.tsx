@@ -16,6 +16,8 @@ export default function Properties() {
     status: searchParams.get('status') || 'Todos',
     type: searchParams.get('type') || 'Todos',
     neighborhood: searchParams.get('neighborhood') || 'Todos',
+    bedrooms: searchParams.get('bedrooms') || 'Todos',
+    minArea: searchParams.get('minArea') || '0',
   }), [searchParams]);
 
   const filteredProperties = useMemo(() => {
@@ -25,8 +27,10 @@ export default function Properties() {
       const matchesStatus = filters.status === 'Todos' || property.status === filters.status;
       const matchesType = filters.type === 'Todos' || property.type === filters.type;
       const matchesNeighborhood = filters.neighborhood === 'Todos' || property.neighborhood === filters.neighborhood;
+      const matchesBedrooms = filters.bedrooms === 'Todos' || property.bedrooms?.toString() === filters.bedrooms;
+      const matchesArea = property.area >= parseInt(filters.minArea);
 
-      return matchesSearch && matchesStatus && matchesType && matchesNeighborhood;
+      return matchesSearch && matchesStatus && matchesType && matchesNeighborhood && matchesBedrooms && matchesArea;
     });
   }, [searchTerm, filters]);
 
@@ -114,7 +118,37 @@ export default function Properties() {
                 </select>
               </div>
 
-              {(searchTerm || filters.status !== 'Todos' || filters.type !== 'Todos' || filters.neighborhood !== 'Todos') && (
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-stone-400 uppercase">Quartos:</span>
+                <select
+                  className="bg-transparent text-sm font-medium focus:outline-none"
+                  value={filters.bedrooms}
+                  onChange={(e) => updateFilter('bedrooms', e.target.value)}
+                >
+                  <option>Todos</option>
+                  <option value="1">1 Quarto</option>
+                  <option value="2">2 Quartos</option>
+                  <option value="3">3 Quartos</option>
+                  <option value="4">4+ Quartos</option>
+                </select>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-stone-400 uppercase">Área Mín:</span>
+                <select
+                  className="bg-transparent text-sm font-medium focus:outline-none"
+                  value={filters.minArea}
+                  onChange={(e) => updateFilter('minArea', e.target.value)}
+                >
+                  <option value="0">Qualquer</option>
+                  <option value="50">50m²</option>
+                  <option value="80">80m²</option>
+                  <option value="120">120m²</option>
+                  <option value="200">200m²</option>
+                </select>
+              </div>
+
+              {(searchTerm || filters.status !== 'Todos' || filters.type !== 'Todos' || filters.neighborhood !== 'Todos' || filters.bedrooms !== 'Todos' || filters.minArea !== '0') && (
                 <Button variant="ghost" size="sm" onClick={clearFilters} className="text-stone-500 hover:text-stone-900 ml-auto">
                   <X className="w-4 h-4 mr-2" />
                   Limpar Filtros

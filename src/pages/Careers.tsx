@@ -53,7 +53,7 @@ export default function Careers() {
             </div>
             <div className="relative">
               <img
-                src="https://picsum.photos/seed/muller-team/800/600"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
                 alt="Equipe Muller"
                 className="rounded-3xl shadow-2xl"
                 referrerPolicy="no-referrer"

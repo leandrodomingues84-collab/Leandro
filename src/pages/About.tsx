@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Shield, Target, Eye, Heart, Award, MapPin } from 'lucide-react';
+import { Shield, Target, Eye, Heart, Award, MapPin, User } from 'lucide-react';
 import { COMPANY_INFO } from '@/src/data/mockData';
 
 export default function About() {
@@ -28,8 +28,8 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <img
-                src="https://picsum.photos/seed/muller-office/800/1000"
-                alt="Escritório Muller"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Edifício Muller"
                 className="rounded-3xl shadow-2xl"
                 referrerPolicy="no-referrer"
               />
@@ -127,5 +127,3 @@ export default function About() {
     </div>
   );
 }
-
-import { User } from 'lucide-react';

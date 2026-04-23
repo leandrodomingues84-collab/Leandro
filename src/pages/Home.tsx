@@ -74,13 +74,13 @@ export default function Home() {
             Nossos consultores estão online agora para tirar todas as suas dúvidas e apresentar as melhores condições de financiamento.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button size="lg" className="rounded-full bg-brand-yellow text-brand-black hover:bg-yellow-500 px-12 h-16 text-xl font-bold shadow-2xl shadow-brand-yellow/10" asChild>
+            <Button size="lg" className="rounded-full bg-brand-yellow text-brand-black hover:bg-yellow-500 px-12 h-16 text-xl font-bold shadow-2xl shadow-brand-yellow/20" asChild>
               <a href={`https://wa.me/${COMPANY_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                 <Phone className="w-6 h-6" />
                 Falar com Consultor
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/10 px-12 h-16 text-xl font-bold" asChild>
+            <Button size="lg" className="rounded-full bg-white text-brand-black hover:bg-stone-100 px-12 h-16 text-xl font-bold shadow-xl" asChild>
               <Link to="/agendamento" className="flex items-center gap-3">
                 <Calendar className="w-6 h-6" />
                 Agendar Visita

@@ -27,6 +27,11 @@ const DIFFERENTIATORS = [
     title: 'Sustentabilidade',
     description: 'Foco em soluções eco-eficientes que reduzem o impacto ambiental e os custos de manutenção.',
   },
+  {
+    icon: TrendingUp, // Reusing icon for simplicity, or could import Bitcoin/Wallet icon if available
+    title: 'Visão de Futuro',
+    description: 'Facilitamos seu investimento aceitando ativos digitais e criptomoedas como forma de pagamento.',
+  },
 ];
 
 export default function WhyChooseUs() {

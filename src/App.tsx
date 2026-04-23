@@ -11,6 +11,8 @@ import Schedule from './pages/Schedule';
 import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Testimonials from './pages/Testimonials';
+import Differentials from './pages/Differentials';
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
         <Route path="contato" element={<Contact />} />
         <Route path="agendamento" element={<Schedule />} />
         <Route path="trabalhe-conosco" element={<Careers />} />
+        <Route path="depoimentos" element={<Testimonials />} />
+        <Route path="diferenciais" element={<Differentials />} />
         <Route path="privacidade" element={<Privacy />} />
         <Route path="termos" element={<Terms />} />
       </Route>

@@ -10,6 +10,8 @@ const NAV_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'A Construtora', href: '/a-construtora' },
   { name: 'Empreendimentos', href: '/empreendimentos' },
+  { name: 'Diferenciais', href: '/diferenciais' },
+  { name: 'Depoimentos', href: '/depoimentos' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contato', href: '/contato' },
 ];
@@ -17,6 +19,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,30 +29,32 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navbarBg = isScrolled 
+    ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' 
+    : (isHomePage ? 'bg-transparent py-5' : 'bg-white shadow-sm py-3');
+
+  const useWhiteText = isHomePage && !isScrolled;
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navbarBg}`}>
       <div className="container mx-auto px-4 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center group shrink-0">
           <Logo 
             className="w-24 md:w-32" 
-            variant={isScrolled ? 'default' : 'white'} 
+            variant={useWhiteText ? 'white' : 'default'} 
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className={`text-sm font-semibold transition-colors hover:text-brand-yellow whitespace-nowrap ${
+              className={`text-[13px] xl:text-sm font-semibold transition-colors hover:text-brand-yellow whitespace-nowrap ${
                 location.pathname === link.href 
-                  ? (isScrolled ? 'text-brand-black underline underline-offset-4' : 'text-brand-yellow underline underline-offset-4') 
-                  : (isScrolled ? 'text-stone-600' : 'text-white/90')
+                  ? (useWhiteText ? 'text-brand-yellow underline underline-offset-4' : 'text-brand-black underline underline-offset-4') 
+                  : (useWhiteText ? 'text-white/90' : 'text-stone-600')
               }`}
             >
               {link.name}
@@ -57,14 +62,15 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3 xl:gap-4 shrink-0">
-          <Button variant="ghost" size="sm" asChild className={`rounded-full transition-colors hidden lg:flex ${isScrolled ? 'text-stone-600 hover:text-brand-black' : 'text-white/80 hover:text-white'}`}>
+        <div className="hidden md:flex items-center gap-2 xl:gap-3 shrink-0">
+          <Button variant="ghost" size="sm" asChild className={`rounded-full transition-colors hidden lg:flex px-3 xl:px-4 ${useWhiteText ? 'text-white/80 hover:text-white' : 'text-stone-600 hover:text-brand-black'}`}>
             <Link to="/agendamento" className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              Agendar Visita
+              <span className="hidden xl:inline">Agendar Visita</span>
+              <span className="xl:hidden">Agendar</span>
             </Link>
           </Button>
-          <Button size="sm" md:size="lg" asChild className="rounded-full bg-brand-yellow text-brand-black hover:bg-yellow-500 px-4 md:px-6 shadow-lg shadow-brand-yellow/20 font-bold">
+          <Button size="sm" asChild className="rounded-full bg-brand-yellow text-brand-black hover:bg-yellow-500 px-4 xl:px-6 shadow-lg shadow-brand-yellow/20 font-bold">
             <a href={`https://wa.me/${COMPANY_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
               <span className="hidden sm:inline">Falar com Consultor</span>
@@ -74,10 +80,10 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className={useWhiteText ? 'text-white' : 'text-stone-900'}>
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>

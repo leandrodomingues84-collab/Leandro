@@ -17,8 +17,8 @@ export default function FeaturedProperties() {
             <span className="text-stone-500 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
               Oportunidades Exclusivas
             </span>
-            <h2 className="text-4xl font-bold text-stone-900">
-              Empreendimentos em Andamento
+            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 max-w-2xl">
+              Como garantimos o ROI do seu investimento imobiliário em Sinop
             </h2>
           </div>
           <Button variant="ghost" asChild className="text-stone-600 hover:text-stone-900">

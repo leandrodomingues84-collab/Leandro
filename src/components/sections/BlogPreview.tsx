@@ -14,8 +14,8 @@ export default function BlogPreview() {
             <span className="text-stone-500 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
               Conteúdo Estratégico
             </span>
-            <h2 className="text-4xl font-bold text-stone-900">
-              Blog & Notícias
+            <h2 className="text-3xl md:text-4xl font-bold text-stone-900">
+              Guia do Investidor & Tendências Imobiliárias 2026
             </h2>
           </div>
           <Button variant="ghost" asChild className="text-stone-600 hover:text-stone-900">

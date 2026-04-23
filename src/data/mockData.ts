@@ -17,8 +17,8 @@ export const PROPERTIES: Property[] = [
     suites: 2,
     parking: 2,
     images: [
-      'https://picsum.photos/seed/eleeva1/1200/800',
-      'https://picsum.photos/seed/eleeva2/1200/800',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1460317442991-0ec239f36791?auto=format&fit=crop&w=1200&q=80',
     ],
     features: ['Piscina com Borda Infinita', 'Espaço Gourmet', 'Academia High-Tech', 'Coworking', 'Pet Place'],
     highlights: ['Entrega Antecipada Garantida', 'Certificação PBQP-H', 'Localização Estratégica'],
@@ -45,8 +45,8 @@ export const PROPERTIES: Property[] = [
     suites: 3,
     parking: 3,
     images: [
-      'https://picsum.photos/seed/panema1/1200/800',
-      'https://picsum.photos/seed/panema2/1200/800',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
     ],
     features: ['Varanda Gourmet Ampla', 'Automação Residencial', 'Vagas para Carro Elétrico', 'Spa e Sauna'],
     highlights: ['Padrão Muller de Qualidade', 'Vista Panorâmica', 'Inteligência de Engenharia'],
@@ -73,8 +73,8 @@ export const PROPERTIES: Property[] = [
     suites: 1,
     parking: 1,
     images: [
-      'https://picsum.photos/seed/urban1/1200/800',
-      'https://picsum.photos/seed/urban2/1200/800',
+      'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
     ],
     features: ['Rooftop Lounge', 'Lavanderia Coletiva', 'Bicicletário', 'Segurança 24h'],
     highlights: ['Ideal para Investimento', 'Baixo Custo de Condomínio', 'Design Inovador'],
@@ -101,7 +101,7 @@ export const PROPERTIES: Property[] = [
     suites: 1,
     parking: 2,
     images: [
-      'https://picsum.photos/seed/guanabara1/1200/800',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
     ],
     features: ['Pronto para Morar', 'Área de Lazer', 'Segurança'],
     highlights: ['Últimas Unidades', 'Entrega Imediata'],

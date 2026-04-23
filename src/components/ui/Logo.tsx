@@ -33,9 +33,9 @@ export const Logo: React.FC<LogoProps> = ({ className = '', showSlogan = false, 
           fontWeight="900"
           fontSize="95"
           letterSpacing="-0.03em"
+          fill={textColor}
         >
-          <tspan fill={brandYellow}>M</tspan>
-          <tspan fill={textColor}>uller</tspan>
+          Muller
         </text>
 
         {/* Empreendimentos Text - Moved down to avoid overlap */}

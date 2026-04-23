@@ -140,6 +140,12 @@ export default function PropertyDetail() {
                 <TabsTrigger value="obra" className="rounded-none border-b-2 border-transparent data-[state=active]:border-stone-900 data-[state=active]:bg-transparent px-0 py-4 text-base font-bold">
                   Status da Obra
                 </TabsTrigger>
+                <TabsTrigger value="tour" className="rounded-none border-b-2 border-transparent data-[state=active]:border-stone-900 data-[state=active]:bg-transparent px-0 py-4 text-base font-bold">
+                  Tour Virtual 360°
+                </TabsTrigger>
+                <TabsTrigger value="plantas" className="rounded-none border-b-2 border-transparent data-[state=active]:border-stone-900 data-[state=active]:bg-transparent px-0 py-4 text-base font-bold">
+                  Plantas
+                </TabsTrigger>
               </TabsList>
               <TabsContent value="sobre" className="py-8">
                 <p className="text-stone-600 leading-relaxed text-lg mb-8">
@@ -182,6 +188,31 @@ export default function PropertyDetail() {
                           className="h-full bg-stone-900"
                         />
                       </div>
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+              <TabsContent value="tour" className="py-8">
+                <div className="aspect-video bg-stone-200 rounded-3xl flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                  <img src="https://picsum.photos/seed/tour360/1280/720" alt="Tour 360" className="w-full h-full object-cover opacity-50" referrerPolicy="no-referrer" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-900">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 transition-transform">
+                      <Share2 className="w-8 h-8 rotate-45" />
+                    </div>
+                    <p className="font-bold text-xl">Iniciar Tour Virtual 360°</p>
+                    <p className="text-sm text-stone-600">Visualize cada detalhe do empreendimento</p>
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="plantas" className="py-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {[1, 2].map(i => (
+                    <div key={i} className="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm">
+                      <h4 className="font-bold text-stone-900 mb-4">Planta Tipo {i}</h4>
+                      <div className="aspect-square bg-stone-50 rounded-2xl overflow-hidden mb-6">
+                        <img src={`https://picsum.photos/seed/planta${i}/800/800`} alt={`Planta ${i}`} className="w-full h-full object-contain p-4" referrerPolicy="no-referrer" />
+                      </div>
+                      <Button variant="outline" className="w-full rounded-xl">Download PDF</Button>
                     </div>
                   ))}
                 </div>
